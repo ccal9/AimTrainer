@@ -25,15 +25,21 @@ public class Target : MonoBehaviour
         Targets = new List<GameObject>();
 
     }
+
+    private void OnClick()
+    {
+        //UI.score += 1;
+        //UI.targetsHit +=1;
+        Destroy(gameObject);
+    }
+
     void spawnTarget(Vector2 spawnPos)
     {
         Vector3 pos = transform.position;
         Vector3 scale = transform.localScale;
         
-        while( < )
-        {
-            
-        }
+        //while( < ){}
+        
     }
 
     // Update is called once per frame
