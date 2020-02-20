@@ -17,6 +17,11 @@ public class Target : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (Input.GetMouseButtonDown(0))
+        {
+            
+        }
+        
         Targets = new List<GameObject>();
 
     }
@@ -27,7 +32,7 @@ public class Target : MonoBehaviour
         
         while( < )
         {
-            this is a test
+            
         }
     }
 
