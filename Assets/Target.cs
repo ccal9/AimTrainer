@@ -21,8 +21,9 @@ public class Target : MonoBehaviour
         {
             
         }
-        
-        Targets = new List<GameObject>();
+
+        //Targets = new List<GameObject>();
+        Destroy(gameObject, 1f);
 
     }
 
