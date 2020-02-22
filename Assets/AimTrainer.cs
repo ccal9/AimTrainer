@@ -7,11 +7,11 @@ public class AimTrainer : MonoBehaviour
     [Header("Set in Inspector")]
     public GameObject targetPrefab;
     public int maxTargets = 30;
-    public float maxScale = 3f;
+    public static float maxScale = 3f;
     public float frequency = 2.5f;
 
     [Header("Set Dynamically")]
-    public float speed;
+    public static float speed;
     public static int score;
     public static int targetsHit;
     public int targetCount;

@@ -6,6 +6,15 @@ using UnityEngine.UI;
 public class Target : MonoBehaviour
 {
     public Text scoreText;
+    GameObject target;
+    private Vector3 scaling;
+   
+
+
+    private void Awake()
+    {
+        scaling = new Vector3(1.5f, 1.5f, 1.5f);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -27,12 +36,10 @@ public class Target : MonoBehaviour
     void Update()
     {
         
-        /*if (Input.GetMouseButtonDown(0))
-        {
-            AimTrainer.score += 10;
-            AimTrainer.targetsHit += 1;
-            Destroy(this.gameObject);
-        }*/
+        this.transform.localScale += scaling * Time.deltaTime; 
+        
+        //this.transform.localScale -= scaling * Time.deltaTime;
+                  
     }
     
 }
