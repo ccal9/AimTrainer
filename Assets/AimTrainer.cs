@@ -8,7 +8,7 @@ public class AimTrainer : MonoBehaviour
     public GameObject targetPrefab;
     public int maxTargets = 30;
     public float maxScale = 3f;
-    public float frequency = 1.5f;
+    public float frequency = 2.5f;
 
     [Header("Set Dynamically")]
     public float speed;
@@ -26,7 +26,7 @@ public class AimTrainer : MonoBehaviour
     void Start()
     {
         //targetPos = transform.position;
-        StartCoroutine("SpawnTargets", 1f);
+        StartCoroutine("SpawnTargets");
     }
 
     public IEnumerator SpawnTargets()
@@ -35,6 +35,7 @@ public class AimTrainer : MonoBehaviour
         {
             targetPos = new Vector3(Random.Range(-30, 30), Random.Range(-15, 15), 0);
             Instantiate<GameObject>(targetPrefab, targetPos, Quaternion.identity);
+            //GameObject tar = new GameObject("targetPrefab");
             targetCount += 1;
             if (targetCount % 2 == 0 && !(frequency <= 0))
             {
