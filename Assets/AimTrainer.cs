@@ -33,11 +33,11 @@ public class AimTrainer : MonoBehaviour
     {
         for (int n = 0; n < maxTargets; n++)
         {
-            targetPos = new Vector3(Random.Range(-30, 30), Random.Range(-15, 15), 0);
+            targetPos = new Vector3(Random.Range(-25, 25), Random.Range(-13, 13), 0);
             Instantiate<GameObject>(targetPrefab, targetPos, Quaternion.identity);
             //GameObject tar = new GameObject("targetPrefab");
             targetCount += 1;
-            if (targetCount % 2 == 0 && !(frequency <= 0))
+            if (targetCount % 2 == 0 && !(frequency <= 0.2))
             {
                 frequency -= .1f;
             }
