@@ -4,48 +4,41 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
-
-    [Header("Set in Inspector")]
-    public GameObject targetPrefab;
-    public int maxTargets = 7;
-    public float maxScale = 3f;
-    public float frequency = 2.5f;
-    public float speed;
+    AimTrainer score;
+    AimTrainer targetCount;
+    AimTrainer targetsHit;
     
 
-    private List<GameObject> Targets;
     // Start is called before the first frame update
     void Start()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            
-        }
-
-        //Targets = new List<GameObject>();
-        Destroy(gameObject, 1f);
-
+      
     }
 
     private void OnClick()
     {
-        //UI.score += 1;
-        //UI.targetsHit +=1;
+        //scoreCounter.score += 10;
+        //scoreCounter.targetsHit +=1;
         Destroy(gameObject);
     }
 
-    void spawnTarget(Vector2 spawnPos)
+    public void FixedUpdate()
     {
+ 
         Vector3 pos = transform.position;
-        Vector3 scale = transform.localScale;
+        //pos = 
+        //Vector3 scale = transform.localScale;
         
-        //while( < ){}
+        //while(scale.x < 3){
+            
+            
+       // }
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        Invoke("spawnTarget", frequency);
+
     }
 }
