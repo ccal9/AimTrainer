@@ -12,27 +12,29 @@ public class AimTrainer : MonoBehaviour
 
     [Header("Set Dynamically")]
     public float speed;
-    public int score;
-    public int targetsHit;
+    public static int score;
+    public static int targetsHit;
     public int targetCount;
     private Vector3 targetPos;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         score = 0;
         targetsHit = 0;
         targetCount = 0;
+    }
+    void Start()
+    {
         //targetPos = transform.position;
-        spawnTargets();
+        StartCoroutine("SpawnTargets", 1f);
     }
 
-    public IEnumerator spawnTargets()
+    public IEnumerator SpawnTargets()
     {
         for (int n = 0; n < maxTargets; n++)
         {
             targetPos = new Vector3(Random.Range(-30, 30), Random.Range(-15, 15), 0);
-            GameObject Ctarget = Instantiate<GameObject>(targetPrefab, targetPos, Quaternion.identity);
+            Instantiate<GameObject>(targetPrefab, targetPos, Quaternion.identity);
             targetCount += 1;
             if (targetCount % 2 == 0 && !(frequency <= 0))
             {

@@ -245,8 +245,6 @@ MonoBehaviour:
   maxScale: 3
   frequency: 1.5
   speed: 0
-  score: 0
-  targetsHit: 0
   targetCount: 0
 --- !u!4 &160572825
 Transform:
@@ -256,7 +254,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160572823}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.9754944, y: -0.3499143, z: -4.6875}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -520,15 +518,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1719909000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c70ee1e48b4ec948b1cd52684d57773, type: 3}
+  m_Script: {fileID: 11500000, guid: df32f690a6c8e2c4f95295129ffe7df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basketPrefab: {fileID: 4293667161194694214, guid: 705da1b8bf94d814697d5ddd23a9ab08,
+  targetPrefab: {fileID: 8707206908950136638, guid: 9b2b6d99814db5d4c8aea9e65468f961,
     type: 3}
-  numBaskets: 3
-  basketBottomY: -14
-  basketSpacingY: 2
-  basketList: []
+  maxTargets: 30
+  maxScale: 3
+  frequency: 1.5
+  speed: 0
+  targetCount: 0
 --- !u!1 &1751486088
 GameObject:
   m_ObjectHideFlags: 0
