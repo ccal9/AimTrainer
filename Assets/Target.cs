@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class Target : MonoBehaviour
 {
-    public Text scoreText;
+    
     GameObject target;
     private Vector3 scaling;
-   
-
+      
+    
 
     private void Awake()
     {
@@ -25,6 +25,9 @@ public class Target : MonoBehaviour
      void OnMouseDown()
     {
         Destroy(this.gameObject);
+        AimTrainer.score += 1;
+
+        ScoreCounter.scoreText.text = "Score: " + AimTrainer.score.ToString();
     }
 
     public void FixedUpdate()

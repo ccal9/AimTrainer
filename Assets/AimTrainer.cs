@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AimTrainer : MonoBehaviour
 {
     [Header("Set in Inspector")]
     public GameObject targetPrefab;
-    public int maxTargets = 30;
+    public int maxTargets = 40;
     public static float maxScale = 3f;
     public float frequency = 2.5f;
 
@@ -16,6 +17,7 @@ public class AimTrainer : MonoBehaviour
     public static int targetsHit;
     public int targetCount;
     private Vector3 targetPos;
+    public Text scoreText;
 
     void Awake()
     {
@@ -37,7 +39,7 @@ public class AimTrainer : MonoBehaviour
             Instantiate<GameObject>(targetPrefab, targetPos, Quaternion.identity);
             //GameObject tar = new GameObject("targetPrefab");
             targetCount += 1;
-            if (targetCount % 2 == 0 && !(frequency <= 0.2))
+            if (targetCount % 2 == 0 && !(frequency <= 0.5))
             {
                 frequency -= .1f;
             }
